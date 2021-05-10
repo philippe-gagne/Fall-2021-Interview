@@ -1,60 +1,53 @@
 # OutStem Front-end Challenge
 
-Welcome to the OutStem front-end challenge. Submission instructions are listed below. The deadline to submit this challenge is **January 25th, 2021 @ 1:00 AM EST**. We would like to emphasize that we are looking for effort, and that the challenge is just part of our discussion with you during the interview, so don’t worry if your solution is hacky or even if it doesn’t work, we want to see it! 
+Welcome to the OutStem front-end challenge. Submission instructions are listed below. The deadline to submit this challenge is **May 24th 11:59pm**. We would like to emphasize that we are looking for effort, and that the challenge is just part of our discussion with you during the interview, so don’t worry if your solution is *hacky* or even if it doesn’t work, we want to see it! 
 
-## Challenge - Frank’s Waste Wizard
-Our client Frank (who lives in Toronto) has requested that we help him with waste sorting, he comes from the old times where everything goes into the trash and gets collected three times a week, one day he received a notice from the city that he will be fined if he doesn’t start properly sorting his waste. Confused by the complex waste sorting charts, he turned to us for help - he wants us to create a front-end only web app that makes it easier for him to:
+## Challenge - User Authentication Screen
+Using Javascript/TypeScript and any framework, your assignment is to implement a responsive signup form and get it looking as close to the design as possible. The expected completion time for this assignment is 2 hours.
 
-- Search for waste item by keyword, item name, etc.
-- Display the proper bin to dispose the trash in
-- Display the escaped information that comes with the dataset properly
-- Add items to a collection called “waste room”. Remove items from the “waste room”
-## Data & Assets
-Here is the Toronto waste dataset that is provided by the City of Toronto, it comes in JSON format so it should be able to be directly consumed by your web app.
+### Brief
+The design team at OutStem has provided you with designs for a new signup form! Your task is to build out the project to the designs inside this folder. You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-```
-https://secure.toronto.ca/cc_sr_v1/data/swm_waste_wizard_APR?limit=1000
-```
+## Mockups
+![Desktop Mockup](screenshot.png)
 
-We have also included some pictures for the different household waste bins in the [assets](/assets) folder. You will need to find a custom icon for a few additional waste types.
-
-## Screenshot
-![Screenshot Example](screenshot.png)
-
-You should not implement the design 1:1, please add your own understanding to this simple mock up.
+### Notes
+- The *Terms of Service* and *Privacy Policy* can be blank links
+- *Continue with google button* can be a blank button
+- The *Login Instead* link can be a blank link, you don't need to implement a sign in UI (unless you want to). 
 
 ## Technical requirements
-1. App will be accessible using a browser
-2. You can use any framework, library you like
-3. Data will come from the dataset mentioned above.
-4. Each result will list at least the following information
-     - Item name
-     - Item description
-     - The bin it belongs in and a picture of such bin (URLs to all pictures can be found in the Data & Assets section)
-5. There will be at most 5 results displayed at a time for any query, have a load more button that will display the next 5 results
-6. The search will happen as the user types
-7. Items in the search result can be added to the “waste room”
-8. The “add to waste room” button should be disabled if the item is already in the waste room
-9. The waste room should have 4 sections, items will be automatically added to their matching section:
-     - Regular trash & curbside pickup
-     - Recycling
-    - Organics & Yard waste
-     - Hazardous Waste
-10. When an item is in the waste room their name will be displayed.
-11. The app will be optimized for mobile devices like smartphones and tablets.
 
-## Frank’s Nice to haves
+- Implement assignment using:
+  - Language: Javascript/TypeScript (Prefer Typescript)
+  - Framework: any framework (Prefer Angular or React)
+- Your users should be able to:
+  - View the optimal layout for the site depending on their device's screen size
+  - See hover states for all interactive elements on the page
+  - Receive an error message when the form is submitted if:
+    - Any input field is empty. The message for this error should say "[Field Name] cannot be empty"
+    - The email address is not formatted correctly (i.e. a correct email address should have this structure: name@host.tld). The message for this error should say "This doesn't look like an email, please try again."
+    - User did not check the terms of service checkbox.
+- You will find all the required assets in the /assets folder. The assets are already optimized, you may also use your own assets.
+- There is also a `style-guide.md` file, containing the information you'll need, such as color palette and fonts.
 
--	Frank thinks it would be nice to be able to add custom waste items to the data set
--	Frank thinks it would be nice to have an image of the item in the search result as well
--	Frank thinks it would be nice to be able to see the details about the waste item in the waste room when he clicks on it
--	Frank thinks it would be nice if the waste room is saved even if he leaves the page
--	Frank thinks it would be nice to be able to share the waste room with his partner via a link or an image
--	Frank thinks it would be nice to have debouncing for the search box since his computer is not very fast
--	Frank is a visual head and would like to see some slick animations on the app (loading, moving items and removing items)
+## Evaluation Criteria
+
+- Javascript/TypeScript best practices
+- Show us your work through your commit history
+- We're looking for you to produce working code, with enough room to demonstrate how to structure components in a small program
+- Completeness: did you complete the features?
+- Correctness: does the functionality act in sensible, thought-out ways?
+- Maintainability: is it written in a clean, maintainable way?
+- Testing: is the system adequately tested?
+
+## Pluses (nice to haves)
+
+- Implement a sign in screen
+- Open a modal when user clicks on terms of service or privacy policy
 
 ## Submission
-Please submit your solution in the 2021 Summer interview GitHub repository.
+Please submit your solution in the 2021 Fall interview GitHub repository.
 
 ### Via Pull Request (Recommended)
 Edit the SUBMISSION.md file and pull request your changes. Make sure to include the following information in the file:
