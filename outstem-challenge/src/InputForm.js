@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import styled from 'styled-components'
+import React from 'react';
 import './App.css';
 import google_logo from './assets/google_logo.svg';
+import danger_icon from './assets/danger_icon.svg';
 import InputField from './InputField.js'
 
 
@@ -23,17 +23,28 @@ class InputForm extends React.Component {
         console.log(password_value);
         
         if(email_value==""){
-            console.log("Email cannot be empty");
+            console.log("email empty");
+            document.getElementById("error-block").innerHTML = "Email cannot be empty";
+            this.show_errorMessage(true);
         } else if (!this.validateEmail(email_value)){
-            console.log("This doesn't look like an email, please try again");
+            console.log("email invalid");
+            document.getElementById("error-block").innerHTML = "This doesn't look like an email, please try again";
+            this.show_errorMessage(true);
         } else if (password_value==""){
-            console.log("Password cannot be empty");
+            console.log("password empty");
+            document.getElementById("error-block").innerHTML = "Password cannot be empty";
+            this.show_errorMessage(true);
         } else if (password_value.length < 8){
-            console.log("Your password must be 8 characters or longer");
+            console.log("password invalid");
+            document.getElementById("error-block").innerHTML = "Your password must be 8 characters or longer";
+            this.show_errorMessage(true);
         } else if (!check){
-            console.log("You must agree to the Terms of Service and Privacy Policy before proceeding");
+            console.log("TOS unchecked");
+            document.getElementById("error-block").innerHTML = "You must agree to the Terms of Service and Privacy Policy before proceeding";
+            this.show_errorMessage(true);
         } else {
             console.log("Login succesful");
+            this.show_errorMessage(false);
         }
         
         event.preventDefault();
@@ -43,35 +54,48 @@ class InputForm extends React.Component {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
-  
+    
+    show_errorMessage(show) {
+        var x = document.getElementById("error-block");
+        if (show) {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-            <a href="https://www.google.com/" target="_blank">
-            <button className="google-button"><img src={google_logo} alt="Google logo" className="button-icon"></img>Continue with Google</button>
-            </a>
+            <form onSubmit={this.handleSubmit}>
+                <a href="https://www.google.com/" target="_blank">
+                    <button className="google-button"><img src={google_logo} alt="Google logo" className="button-icon"></img>Continue with Google</button>
+                </a>
 
-            <div className="strike">
-                <span>or sign in with email</span>
-            </div>
+                <div className="strike">
+                    <span>or sign in with email</span>
+                </div>
 
-          <div className="input-component"> 
-            <InputField name="email" type="email"  label="Email" ref={(ref) => this.emailInput = ref}/>
-          </div>
+                <div className="input-component"> 
+                    <InputField name="email" type="email"  label="Email" ref={(ref) => this.emailInput = ref}/>
+                </div>
 
-          <div className="input-component"> 
-            <InputField name= "password" type="password" label="Password (min. 8 characters)" ref={(ref) => this.passwordInput = ref}/>
-          </div> 
+                <div className="input-component"> 
+                    <InputField name= "password" type="password" label="Password (min. 8 characters)" ref={(ref) => this.passwordInput = ref}/>
+                </div> 
 
-            <div className="input-component">
-            <input type="checkbox" id="terms_conditions" name="terms_conditions" />
-                <label for="terms_conditions">I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></label><br />
-            </div>
+                <div className="input-component">
+                    <input type="checkbox" id="terms_conditions" name="terms_conditions" />
+                    <label for="terms_conditions" style={{wordWrap:"break-word"}}>I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></label><br />
+                </div>
 
-          <div className="input-component"> 
-            <input type="submit" value="Get Started" className="submit-button" onClick={this.handleSubmit}/>
-          </div>
-        </form>
+                <div className="input-component"> 
+                    <input type="submit" value="Get Started" className="submit-button" onClick={this.handleSubmit}/>
+                </div>
+                
+                <p className="error-message" id="error-block"><img src={danger_icon} alt="Danger warning" className="button-icon" style={{float:"left", paddingBottom:"12px"}}></img>
+                Error Message</p>
+                
+            </form>
       );
     }
   }
