@@ -24,23 +24,23 @@ class InputForm extends React.Component {
         
         if(email_value==""){
             console.log("email empty");
-            document.getElementById("error-block").innerHTML = "Email cannot be empty";
+            document.getElementById("error-msg").innerHTML = "The email field cannot be empty";
             this.show_errorMessage(true);
         } else if (!this.validateEmail(email_value)){
             console.log("email invalid");
-            document.getElementById("error-block").innerHTML = "This doesn't look like an email, please try again";
+            document.getElementById("error-msg").innerHTML = "This doesn't look like an email, please try again";
             this.show_errorMessage(true);
         } else if (password_value==""){
             console.log("password empty");
-            document.getElementById("error-block").innerHTML = "Password cannot be empty";
+            document.getElementById("error-msg").innerHTML = "The password field cannot be empty";
             this.show_errorMessage(true);
         } else if (password_value.length < 8){
             console.log("password invalid");
-            document.getElementById("error-block").innerHTML = "Your password must be 8 characters or longer";
+            document.getElementById("error-msg").innerHTML = "Your password must be 8 characters or longer";
             this.show_errorMessage(true);
         } else if (!check){
             console.log("TOS unchecked");
-            document.getElementById("error-block").innerHTML = "You must agree to the Terms of Service and Privacy Policy before proceeding";
+            document.getElementById("error-msg").innerHTML = "You must agree to the Terms of Service and Privacy Policy before proceeding";
             this.show_errorMessage(true);
         } else {
             console.log("Login succesful");
@@ -92,9 +92,10 @@ class InputForm extends React.Component {
                     <input type="submit" value="Get Started" className="submit-button" onClick={this.handleSubmit}/>
                 </div>
                 
-                <p className="error-message" id="error-block"><img src={danger_icon} alt="Danger warning" className="button-icon" style={{float:"left", paddingBottom:"12px"}}></img>
-                Error Message</p>
-                
+                <div className="error-message" id="error-block">
+                <img src={danger_icon} alt="Danger warning" className="button-icon" style={{float:"left", paddingBottom:"12px"}}></img>
+                <p id="error-msg" style={{margin:"0"}}>Error Message</p>
+                </div>
             </form>
       );
     }
