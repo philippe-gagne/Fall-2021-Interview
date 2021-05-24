@@ -2,6 +2,7 @@
   --foreground: #333333;
   --primary: #F63E34;
   --primary-activated: #C33129;
+  --primary-intermediate: #EA3B31;
   --secondary: #B7B7B7;
   --danger: #DC3545;
 }
@@ -100,6 +101,10 @@ label{
   vertical-align: middle;
 }
 
+.input-field:hover{
+  border-color: var(--foreground);
+}
+
 input[type=email]:focus{
   border-color: var(--primary-activated);
   /* border-style: solid; */
@@ -146,6 +151,11 @@ input{
   margin-top: 24px;
 }
 
+.submit-button:hover{
+  background-color:var(--primary-intermediate);
+  border-color:var(--primary-intermediate);
+}
+
 .google-button{
   background-color: white;
   border-color: var(--secondary);
@@ -160,8 +170,8 @@ input{
   vertical-align: middle;
 }
 
-.google-button:active{
-  border-color:white;
+.google-button:hover{
+  border-color:var(--foreground);
 }
 
 .strike {
