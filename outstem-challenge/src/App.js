@@ -1,8 +1,5 @@
 import React, {useState} from 'react'
-import styled from 'styled-components'
-import logo from './logo.svg';
-import google_logo from './assets/google_logo.svg';
-import backdrop from './assets/backdrop.jpg';
+import outstem_logo from './assets/outstem_logo_icon.png'
 import InputForm from './InputForm.js'
 import './App.css';
 
@@ -19,6 +16,7 @@ function App() {
           
         </div>
       </header>
+      <img src={outstem_logo} style={{position:"fixed", bottom:"16px", left:"16px"}}/>
     </div>
   );
 }
