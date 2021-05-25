@@ -17,7 +17,22 @@
 
 This project is part of a the job interview process at the University of Ottawa's Engineering Outreach Department. My submission will only include this year's front-end challenge. For any curious minds who'd like to see more about the back-end challenge, feel free to take a look at the [About](About.md) file in this repository. It's a duplicate of the challenge's original README. You can also view the full challenge repository (the one from which this one is forked) [here](https://github.com/AES-Outreach/Fall-2021-Interview).
 
-A note to anyone from the OutStem team (or anybody else) who may be reading this down the line: this project is my first time using JavaScript and React. I'm very interested in product design and front-end development, and for that reason, even though it isn't my background, I wanted to challenge myself with this task. A lot of this is going to be me experimenting and trying to figure my way out around JS development for the first time, so, *full disclosure*, it's going to be a bit hacky. 
+A note to anyone from the OutStem team (or anybody else) who may be reading this down the line: this project is my first time using JavaScript and React. I'm very interested in product design and front-end development, and for that reason, even though it isn't my background, I wanted to challenge myself with this task. A lot of this is going to be me experimenting and trying to figure my way out around JS development for the first time, so, *full disclosure*, it's going to be a bit hacky.
+
+## Known Issues
+While working on this challenge I was primarily focused on delivering a minimum viable product that met the functionality requirements. This meant that there were a few details along the way that I noticed but either was not able to or did not have the time to fix. I've listed them here with short explanations.
+
+### Background Responsiveness
+The background image is not totally responsive. When the viewport is at very wide or very narrow aspect ratios, the background image won't fill the space meant for it. I think this issue could be solved by placing the image in its own div (instead of using the CSS background property). I toyed with this idea for a bit but couldn't find a good solution that also preserved mobile functionality.
+
+### Google Icon Alignment
+The Google icon in the "Continue with Google" button is not correctly aligned with the text.
+
+### Checkbox Label Alignment
+The label for the Terms of Service / Privacy Policy checkbox is not aligned at the center of the checkbox. I worked on this one for a long time but couldn't get it right.
+
+### Error Widget Icon
+The "warning" icon in the error widget is misaligned when the error message is only one line long. The surrounding div doesn't properly wrap around the SVG with appropriate margins. It behaves appropriately (read: looks better) when the text overflows to 2 or more lines.
 
 ## Contact
 If you have any thoughts or questions, please feel free to reach out to me on [Twitter](https://twitter.com/philippegagne00) or by email at philg2000@gmail.com
