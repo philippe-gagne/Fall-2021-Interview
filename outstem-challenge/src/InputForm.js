@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import google_logo from './assets/google_logo.svg';
 import danger_icon from './assets/danger_icon.svg';
 import InputField from './InputField.js'
-
 
 class InputForm extends React.Component {
     constructor(props) {
@@ -28,7 +26,7 @@ class InputForm extends React.Component {
             this.show_errorMessage(true);
         } else if (!this.validateEmail(email_value)){
             console.log("email invalid");
-            document.getElementById("error-msg").innerHTML = "This doesn't look like an email, please try again";
+            document.getElementById("error-msg").innerHTML = "That doesn't look like an email, please try again";
             this.show_errorMessage(true);
         } else if (password_value==""){
             console.log("password empty");
@@ -67,9 +65,6 @@ class InputForm extends React.Component {
     render() {
       return (
             <form onSubmit={this.handleSubmit}>
-                <a href="https://www.google.com/" target="_blank">
-                    <button className="google-button"><img src={google_logo} alt="Google logo" className="button-icon"></img>Continue with Google</button>
-                </a>
 
                 <div className="strike">
                     <span>or sign in with email</span>
@@ -88,7 +83,7 @@ class InputForm extends React.Component {
                     <label for="terms_conditions" style={{wordWrap:"break-word"}}>I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></label><br />
                 </div>
 
-                <div className="input-component"> 
+                <div className="input-component">
                     <input type="submit" value="Get Started" className="submit-button" onClick={this.handleSubmit}/>
                 </div>
                 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --foreground: #333333;
   --primary: #F63E34;
@@ -6,7 +8,6 @@
   --secondary: #B7B7B7;
   --danger: #DC3545;
 }
-
 
 .App {
   display: flex;
@@ -19,13 +20,6 @@
   background-repeat: no-repeat;
   background-clip:inherit;
 }
-
-/* .back-drop {
-  text-align: left;
-  position:relative;
-  white-space:nowrap;
-  overflow: hidden; 
-} */
 
 .App-header {
   background-color: white;
@@ -81,9 +75,6 @@ h4{
   text-align: left;
   margin-top: 15%;
   margin-bottom: 15%;
-  /* border-width: 1px;
-  border-color: black;
-  border-style: solid; */
 }
 
 .input-field{
@@ -98,6 +89,7 @@ h4{
   font-size: 14;
   height: 3em;
   vertical-align: middle;
+  padding-left: 8px;
 }
 
 .input-field:hover{
@@ -106,22 +98,14 @@ h4{
 
 input[type=email]:focus{
   border-color: var(--primary-activated);
-  /* border-style: solid; */
   border-radius: 4px;
   box-shadow: 0px 0px 4px var(--primary-activated);
 }
 
 input[type=password]:focus{
   border-color: var(--primary-activated);
-  /* border-style: solid; */
   border-radius: 4px;
   box-shadow: 0px 0px 4px var(--primary-activated);
-}
-
-input[type=submit]:active{
-  background-color: var(--primary-activated);
-  border-color: var(--primary-activated);
-  /* border-style: solid; */
 }
 
 input[type=checkbox]{
@@ -133,8 +117,14 @@ input[type=checkbox]{
 
  
 }
+
 input[type=checkbox]:checked{
   filter: hue-rotate(150deg);
+}
+
+input[type=submit]:active{
+  background-color: var(--primary-activated);
+  border-color: var(--primary-activated);
 }
 
 input{
@@ -238,15 +228,6 @@ label{
 .strike > span:after {
   left: 100%;
   margin-left: 15px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 a{color: var(--primary)}
