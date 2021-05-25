@@ -19,6 +19,8 @@ This project is part of a the job interview process at the University of Ottawa'
 
 A note to anyone from the OutStem team (or anybody else) who may be reading this down the line: this project is my first time using JavaScript and React. I'm very interested in product design and front-end development, and for that reason, even though it isn't my background, I wanted to challenge myself with this task. A lot of this is going to be me experimenting and trying to figure my way out around JS development for the first time, so, *full disclosure*, it's going to be a bit hacky.
 
+You can view my submission here: https://philippe-gagne-outstem-challenge.netlify.app/
+
 ## Implementation Notes
 I added a couple of extra things along the way that were not in the requirements but I wanted to point out.
 
